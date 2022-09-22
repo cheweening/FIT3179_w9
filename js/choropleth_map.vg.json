@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "GDP Per Capita (2019)",
+  "title": "World Happiness (2019)",
   "width": 800,
   "height": 400,
   "projection": {"type": "equalEarth"},
@@ -16,7 +16,7 @@
           "url": "https://raw.githubusercontent.com/cheweening/FIT3179_w9/main/data/2019.csv"
         },
         "key": "Country or region",
-        "fields": ["GDP per capita"]
+        "fields": ["Score"]
       }
     },
     {"calculate": "datum.Active + 0.1", "as": "Active Cases"}
@@ -24,17 +24,17 @@
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "GDP per capita",
+      "field": "Score",
       "type": "quantitative",
       "scale": {
           "type": "threshold",
-          "domain": [0.5,1,1.25],
+          "domain": [1,3,5,7],
           "range": ["#A9CCE3", "#5DADE2", "#2471A3", "#21618C", "#17202A"]
 }
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-      {"field": "GDP per capita", "type": "quantitative"}
+      {"field": "Score", "type": "quantitative"}
     ]
   }
 }
