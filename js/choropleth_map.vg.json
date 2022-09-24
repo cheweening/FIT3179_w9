@@ -15,13 +15,13 @@
       "encoding": {"tooltip": {"field": "note"}}
     },
     {
-  "data": {
-    "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
-    "format": {"type": "topojson", "feature": "oceans"}
-   },
-  "mark": {"type": "geoshape", "fill": "skyblue"}
-   },
-   {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+        "format": {"type": "topojson", "feature": "oceans"}
+      },
+      "mark": {"type": "geoshape", "fill": "skyblue"}
+    },
+    {
       "data": {
         "url": "https://raw.githubusercontent.com/cheweening/FIT3179_w9/main/js/ne_110m.json",
         "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
@@ -37,7 +37,7 @@
               "url": "https://raw.githubusercontent.com/cheweening/FIT3179_w9/main/data/2019.csv"
             },
             "key": "Country or region",
-            "fields": ["Score","Overall rank"]
+            "fields": ["Score", "Overall rank"]
           }
         }
       ],
@@ -49,17 +49,21 @@
           "scale": {
             "type": "threshold",
             "domain": [4, 5, 6, 7],
-            "range": ["#D7BDE2", "#F9E79F", "#F8C471", "#EB984E", "#E74C3C"]
+            "range": ["#F9E79F", "#F8C471", "#EB984E", "#CB4335", "#6E2C00"]
           }
         },
         "tooltip": [
-          {"field": "properties.NAME", "type": "nominal", "title": "Country or region"},
-          {"field": "Score", 
-          "type": "quantitative",
-          "title" : "Score"},
-          {"field": "Overall rank", 
-          "type": "quantitative",
-          "title" : "Overall rank"}
+          {
+            "field": "properties.NAME",
+            "type": "nominal",
+            "title": "Country or region"
+          },
+          {"field": "Score", "type": "quantitative", "title": "Score"},
+          {
+            "field": "Overall rank",
+            "type": "quantitative",
+            "title": "Overall rank"
+          }
         ]
       }
     }
